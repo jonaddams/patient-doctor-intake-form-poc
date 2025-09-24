@@ -38,18 +38,22 @@ export default function Home() {
 		const now = new Date();
 		const appointmentDateTime = new Date(now.getTime() + 20 * 60 * 1000); // Add 20 minutes
 
-		setAppointmentDate(now.toLocaleDateString("en-US", {
-			weekday: "long",
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		}));
+		setAppointmentDate(
+			now.toLocaleDateString("en-US", {
+				weekday: "long",
+				year: "numeric",
+				month: "long",
+				day: "numeric",
+			}),
+		);
 
-		setAppointmentTime(appointmentDateTime.toLocaleTimeString("en-US", {
-			hour: "numeric",
-			minute: "2-digit",
-			hour12: true,
-		}));
+		setAppointmentTime(
+			appointmentDateTime.toLocaleTimeString("en-US", {
+				hour: "numeric",
+				minute: "2-digit",
+				hour12: true,
+			}),
+		);
 
 		// Update current time
 		const updateTime = () => {
@@ -235,10 +239,10 @@ export default function Home() {
 								<div>
 									<p className="font-medium text-green-900 mb-2">Good news!</p>
 									<p className="text-green-800 text-sm">
-										We&apos;ve pre-filled your intake forms with information from
-										your previous visits. Please review and update any
+										We&apos;ve pre-filled your intake forms with information
+										from your previous visits. Please review and update any
 										information as needed, then provide your electronic
-										signatures.
+										signatures. Your signature will not be stored.
 									</p>
 								</div>
 							</div>
