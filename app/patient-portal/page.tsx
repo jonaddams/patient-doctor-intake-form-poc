@@ -28,6 +28,8 @@ export default function PatientPortal() {
 	const [patientData, setPatientData] = useState<PatientData | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [currentDocument, setCurrentDocument] = useState<string | null>(null);
+	const [appointmentDate, setAppointmentDate] = useState<string>("");
+	const [appointmentTime, setAppointmentTime] = useState<string>("");
 
 	const forms = [
 		{
@@ -76,6 +78,27 @@ export default function PatientPortal() {
 		};
 
 		loadPatientData();
+
+		// Set appointment date and time
+		const now = new Date();
+		const appointmentDateTime = new Date(now.getTime() + 20 * 60 * 1000); // Add 20 minutes
+
+		setAppointmentDate(
+			now.toLocaleDateString("en-US", {
+				weekday: "long",
+				year: "numeric",
+				month: "long",
+				day: "numeric",
+			}),
+		);
+
+		setAppointmentTime(
+			appointmentDateTime.toLocaleTimeString("en-US", {
+				hour: "numeric",
+				minute: "2-digit",
+				hour12: true,
+			}),
+		);
 	}, []);
 
 	const handleFormComplete = () => {
@@ -238,8 +261,7 @@ export default function PatientPortal() {
 						</div>
 						<div className="text-blue-800 text-sm">
 							<p>
-								<strong>Date:</strong> {patientData?.visitInfo.date} at{" "}
-								{patientData?.visitInfo.time}
+								<strong>Date:</strong> {appointmentDate} at {appointmentTime}
 							</p>
 							<p>
 								<strong>Provider:</strong> {patientData?.visitInfo.provider}
