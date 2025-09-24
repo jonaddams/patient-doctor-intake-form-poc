@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contact Information</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12px;
+            line-height: 1.4;
+            margin: 0.5in;
+            color: #000;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+        .practice-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .form-group {
+            margin-right: 30px;
+            flex: 1;
+        }
+        .form-group.half {
+            flex: 0.5;
+        }
+        .form-group.third {
+            flex: 0.33;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .field-box {
+            border: 1px solid #000;
+            height: 25px;
+            padding: 5px;
+            background-color: #f9f9f9;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+        }
+        .signature-section {
+            margin-top: 40px;
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+        .signature-line {
+            border-bottom: 1px solid #000;
+            height: 25px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: end;
+            padding-bottom: 5px;
+        }
+        .field-box.signature {
+            height: 50px;
+            background-color: #f0f8ff;
+            border: 2px solid #4a90e2;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        .important-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="practice-name">SPRINGFIELD FAMILY MEDICAL CENTER</div>
+        <div>123 Medical Plaza Drive • Springfield, IL 62701 • Phone: (555) 123-CARE</div>
+        <div class="form-title">EMERGENCY CONTACT INFORMATION</div>
+    </div>
+
+    <div class="important-notice">
+        <strong>IMPORTANT:</strong> Please provide at least one emergency contact who can be reached in case of a medical emergency. This person should be someone other than yourself who is familiar with your medical history and can make decisions on your behalf if necessary.
+    </div>
+
+    <div class="section-title">PRIMARY EMERGENCY CONTACT</div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="emergencyName">Full Name*</label>
+            <input type="text" id="emergencyName" name="emergencyName" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="relationship">Relationship to Patient*</label>
+            <input type="text" id="relationship" name="relationship" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="emergencyPhone">Primary Phone Number*</label>
+            <input type="text" id="emergencyPhone" name="emergencyPhone" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="emergencyPhone2">Alternate Phone Number</label>
+            <input type="text" id="emergencyPhone2" name="emergencyPhone2" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="emergencyEmail">Email Address</label>
+            <input type="text" id="emergencyEmail" name="emergencyEmail" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="emergencyAddress">Home Address</label>
+            <input type="text" id="emergencyAddress" name="emergencyAddress" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group third">
+            <label for="emergencyCity">City</label>
+            <input type="text" id="emergencyCity" name="emergencyCity" class="field-box" >
+        </div>
+        <div class="form-group third">
+            <label for="emergencyState">State</label>
+            <input type="text" id="emergencyState" name="emergencyState" class="field-box" >
+        </div>
+        <div class="form-group third">
+            <label for="emergencyZip">ZIP Code</label>
+            <input type="text" id="emergencyZip" name="emergencyZip" class="field-box" >
+        </div>
+    </div>
+
+    <div class="section-title">SECONDARY EMERGENCY CONTACT (Optional)</div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="emergency2Name">Full Name</label>
+            <input type="text" id="emergency2Name" name="emergency2Name" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="relationship2">Relationship to Patient</label>
+            <input type="text" id="relationship2" name="relationship2" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="emergency2Phone">Primary Phone Number</label>
+            <input type="text" id="emergency2Phone" name="emergency2Phone" class="field-box" >
+        </div>
+    </div>
+
+    <div class="section-title">MEDICAL DECISION MAKING</div>
+
+    <div style="margin: 20px 0;">
+        <p><strong>In the event that you are unable to make medical decisions for yourself, who would you like to be contacted to make decisions on your behalf?</strong></p>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="decisionMaker">Name of Medical Decision Maker</label>
+                <input type="text" id="decisionMaker" name="decisionMaker" class="field-box" >
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half">
+                <label for="decisionMakerRelation">Relationship</label>
+                <input type="text" id="decisionMakerRelation" name="decisionMakerRelation" class="field-box" >
+            </div>
+            <div class="form-group half">
+                <label for="decisionMakerPhone">Phone Number</label>
+                <input type="text" id="decisionMakerPhone" name="decisionMakerPhone" class="field-box" >
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="signature-section">
+        <p><strong>I certify that the emergency contact information provided above is accurate and current. I authorize Springfield Family Medical Center to contact these individuals in case of a medical emergency.</strong></p>
+
+        <div class="form-row" style="margin-top: 30px;">
+            <div class="form-group half">
+                <label for="patientSignature">Patient Signature</label>
+                <input type="text" id="patientSignature" name="patientSignature" class="field-box signature">
+            </div>
+            <div class="form-group half">
+                <label for="signatureDate">Date</label>
+                <input type="text" id="signatureDate" name="signatureDate" class="field-box">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 10px; color: #666;">
+        <p>*Required fields must be completed</p>
+        <p>Page 2 of 6</p>
+    </div>
+</body>
+</html>

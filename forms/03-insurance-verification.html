@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Verification Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12px;
+            line-height: 1.4;
+            margin: 0.5in;
+            color: #000;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+        .practice-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .form-group {
+            margin-right: 30px;
+            flex: 1;
+        }
+        .form-group.half {
+            flex: 0.5;
+        }
+        .form-group.third {
+            flex: 0.33;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .field-box {
+            border: 1px solid #000;
+            height: 25px;
+            padding: 5px;
+            background-color: #f9f9f9;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+        }
+        .signature-section {
+            margin-top: 40px;
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+        .signature-line {
+            border-bottom: 1px solid #000;
+            height: 25px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: end;
+            padding-bottom: 5px;
+        }
+        .important-notice {
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        .field-box.signature {
+            height: 50px;
+            background-color: #f0f8ff;
+            border: 2px solid #4a90e2;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="practice-name">SPRINGFIELD FAMILY MEDICAL CENTER</div>
+        <div>123 Medical Plaza Drive • Springfield, IL 62701 • Phone: (555) 123-CARE</div>
+        <div class="form-title">INSURANCE VERIFICATION FORM</div>
+    </div>
+
+    <div class="important-notice">
+        <strong>INSURANCE INFORMATION REQUIRED:</strong> Please bring your insurance cards with you today. We will make copies for our records. If you do not have insurance or if your insurance has changed, please inform our staff immediately.
+    </div>
+
+    <div class="section-title">PRIMARY INSURANCE</div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="primaryInsurance">Insurance Company Name*</label>
+            <input type="text" id="primaryInsurance" name="primaryInsurance" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="primaryPolicy">Policy/Member ID Number*</label>
+            <input type="text" id="primaryPolicy" name="primaryPolicy" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="primaryGroup">Group Number</label>
+            <input type="text" id="primaryGroup" name="primaryGroup" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="primarySubscriber">Subscriber/Policy Holder Name*</label>
+            <input type="text" id="primarySubscriber" name="primarySubscriber" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="primarySubscriberDOB">Subscriber Date of Birth*</label>
+            <input type="text" id="primarySubscriberDOB" name="primarySubscriberDOB" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Relationship to Subscriber*</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="primarySelf" name="primaryRelationship" value="self">
+                    <label for="primarySelf">Self</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="primarySpouse" name="primaryRelationship" value="spouse">
+                    <label for="primarySpouse">Spouse</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="primaryChild" name="primaryRelationship" value="child">
+                    <label for="primaryChild">Child</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="primaryOther" name="primaryRelationship" value="other">
+                    <label for="primaryOther">Other</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">SECONDARY INSURANCE (If Applicable)</div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="secondaryInsurance">Insurance Company Name</label>
+            <input type="text" id="secondaryInsurance" name="secondaryInsurance" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="secondaryPolicy">Policy/Member ID Number</label>
+            <input type="text" id="secondaryPolicy" name="secondaryPolicy" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="secondaryGroup">Group Number</label>
+            <input type="text" id="secondaryGroup" name="secondaryGroup" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group half">
+            <label for="secondarySubscriber">Subscriber/Policy Holder Name</label>
+            <input type="text" id="secondarySubscriber" name="secondarySubscriber" class="field-box" >
+        </div>
+        <div class="form-group half">
+            <label for="secondarySubscriberDOB">Subscriber Date of Birth</label>
+            <input type="text" id="secondarySubscriberDOB" name="secondarySubscriberDOB" class="field-box" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Relationship to Subscriber</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="secondarySelf" name="secondaryRelationship" value="self">
+                    <label for="secondarySelf">Self</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="secondarySpouse" name="secondaryRelationship" value="spouse">
+                    <label for="secondarySpouse">Spouse</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="secondaryChild" name="secondaryRelationship" value="child">
+                    <label for="secondaryChild">Child</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="secondaryOther" name="secondaryRelationship" value="other">
+                    <label for="secondaryOther">Other</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">INSURANCE VERIFICATION</div>
+
+    <div style="margin: 20px 0;">
+        <p><strong>For Office Use Only:</strong></p>
+
+        <div class="form-row">
+            <div class="form-group third">
+                <label for="copay">Copay Amount</label>
+                <input type="text" id="copay" name="copay" class="field-box" >
+            </div>
+            <div class="form-group third">
+                <label for="deductible">Deductible</label>
+                <input type="text" id="deductible" name="deductible" class="field-box" >
+            </div>
+            <div class="form-group third">
+                <label for="effectiveDate">Effective Date</label>
+                <input type="text" id="effectiveDate" name="effectiveDate" class="field-box" >
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half">
+                <label for="verifiedBy">Verified By</label>
+                <input type="text" id="verifiedBy" name="verifiedBy" class="field-box" >
+            </div>
+            <div class="form-group half">
+                <label for="verificationDate">Date Verified</label>
+                <input type="text" id="verificationDate" name="verificationDate" class="field-box" >
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="signature-section">
+        <p><strong>I certify that the insurance information provided above is accurate and current. I understand that I am financially responsible for any services not covered by my insurance plan.</strong></p>
+
+        <div class="form-row" style="margin-top: 30px;">
+            <div class="form-group half">
+                <label for="patientSignature">Patient Signature</label>
+                <input type="text" id="patientSignature" name="patientSignature" class="field-box signature">
+            </div>
+            <div class="form-group half">
+                <label for="signatureDate">Date</label>
+                <input type="text" id="signatureDate" name="signatureDate" class="field-box">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 10px; color: #666;">
+        <p>*Required fields must be completed</p>
+        <p>Please present insurance cards for verification</p>
+        <p>Page 3 of 6</p>
+    </div>
+</body>
+</html>
